@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int isDigit(char sym) {
+
+  return (sym >= '0' && sym <= '9') ? 1 : 0;
+
+}
+
+
+
+int main() {
+  if (isDigit('5')){
+    printf("Yes,it's a digit number.\n");
+  }
+  else{
+    printf("No,it's not a digit number.\n");
+  }
+
+}
