@@ -1,0 +1,49 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int isDigit(char sym){
+    return (sym >= '0' && sym <= '9') ? 1 : 0;
+}
+
+int isNumber(char* n){
+    while(*n){
+        if(!isDigit(*n)){
+            return 0;
+        }
+      n++;
+    }
+    return 1;
+}
+
+int strSize(char* string){
+    int i = 0;
+    while(*string != 0){
+       string++;
+       i++;
+    }
+    return i;
+}
+
+int strToNum(char* string){
+    if(isNumber(string)){
+        int n = 0;
+        int power = 1;
+        for(int i = strSize(string) - 1; i >= 0; i--){
+            n += (string[i] - '0') * power;
+            power *= 10;
+        }
+        return n;
+    }
+    printf("Error");
+    exit(1);
+}
+
+int main(){
+    int a = strToNum("183");
+    printf("%d\n", a);
+
+    return 0;
+}
+
