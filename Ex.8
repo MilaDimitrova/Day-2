@@ -1,0 +1,35 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int isLower(char sym) {
+
+  return (sym >= 'a' && sym <= 'z') ? 1 : 0;
+
+}
+
+int isUpper(char sym){
+
+    return (sym >= 'A' && sym <= 'Z') ? 1 : 0;
+}
+
+int isLetter(char sym){
+    return isLower(sym) || isUpper(sym) ? 1 : 0;
+}
+
+int main() {
+  if (isLower('a')){
+    printf("Yes,it's lower-case letter.\n");
+  }
+  else{
+    printf("No,it's not a lower-case letter.\n");
+  }
+
+ if (isUpper('D')){
+    printf("Yes,it's upper-case letter\n" );
+  }
+  else{
+    printf("No,it's not a upper-case letter.");
+  }
+}
